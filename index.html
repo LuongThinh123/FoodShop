@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+          integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />    
+    <link rel="stylesheet" href="base/css/base.css">
+    <link rel="stylesheet" href="home/css/home.css">
+    <link rel="stylesheet" href="modal/css/modalCart.css">
+    <link rel="stylesheet" href="modal/css/modalNotification.css">
+    <link rel="stylesheet" href="modal/css/auth.css">
+</head>
+<body>
+    <div class="header" id="header">
+        <div class="home-logo">
+            <a href="#Home">
+                <img src="./images/1200px-Food_Network_Logo.svg.png" alt="">
+                <div>CT-FOOD</div>
+            </a>
+        </div>
+        <ul class="nav__list">
+            <li class="nav__item"><a href="#Home">Trang chủ</a></li>
+            <li class="nav__item"><a href="/about/about.html">Giới thiệu</a></li>
+            <li class="nav__item"><a href="/shop/shop.html">Sản phẩm</a></li>
+            <li class="nav__item"><a href="/contact/contact.html">Liên hệ</a></li>
+        </ul>
+
+        <div class = "nav__icon">
+            <!-- <div class="home-search">
+                <i class="fas fa-search"></i>
+            </div> -->
+            <div class="nav__user">
+                <div class="user__icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class = "nav__user-img">
+                    <img src="https://source.unsplash.com/random" alt="">
+                </div>
+                <div class="user__menu-bar">
+                    <h3 class="user__menu-username"></h3>
+                    <ul class="user__menu-bar-list">
+                        <li class="user__menu-item">
+                            <a href="/orderPage/orderPage.html">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                                <p>Đơn hàng</p>
+                            </a>
+                        </li>
+                        <li class="user__menu-item user__menu--logout">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <p>Đăng xuất</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav__cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="nav__cart-notice">0</span>
+            </div>
+        </div>
+    </div>  
+  
+
+   
+    <div id="Home" class="Home-slider">
+        <div class="slider__container">
+            <div class ="slider slider--active">
+                <img src="./images/home2_slide1.jpg" alt="">
+                <div class="text">CHÀO MỪNG BẠN ĐẾN VỚI CT-FOOD</div>
+            </div>
+         
+            <div class ="slider">
+                <img src="./images/home2_slide2.jpg" alt="">
+                <div class="text">LỰA CHỌN THẢ GA NHỮNG MÓN BẠN THÍCH</div>
+            </div>
+
+            <div class ="slider">
+                <img src="./images/home2_slide3.jpg" alt="">
+                <div class="text">ĐẶT HÀNG TIỆN LỢI CÙNG CT-FOOD</div>
+            </div>
+
+            <div class="Home__next-prev-btn">
+                <button class="Home__prev-btn" onclick="clickSlideBtn(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="Home__next-btn" onclick="clickSlideBtn(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div> 
+    </div>
+    
+    <div class="Home-menu">
+        <div class="Home-menu__header">
+            <h3 class="menu__header">Danh Mục Sản Phẩm</h3>
+            <p class="menu__content">Rất nhiều món ngon, thỏa sức lựa chọn</p>
+        </div>
+
+        <div class="Home-category">
+            <div class="category__product">
+        
+            </div>
+        </div>
+    </div>
+
+    <div class="Home-feature"> 
+        <div class="Home-feature__header">
+            <h3 class="feature__header">Sản Phẩm nổi bật</h3>
+            <p class="feature__content">Rất nhiều món ngon, thỏa sức lựa chọn</p>
+        </div>
+
+        <div class="Home-feature__products"> 
+            <div class="product-list">
+                <div class="product-post">
+                    <div class="product-post__imgBx">
+                        <a class="detail__link" href="detail/detail.html?3">
+                            <img src="./images/product_burger-bo.jpg" alt="">
+                        </a>
+                        <div class="detail__button">
+                            <a class="detail__button-link" href="detail/detail.html?3">Chi tiết</a>
+                        </div>
+                    </div>
+
+                    <div class="product-post__data">
+                        <div class="product-post-item__name">
+                            <h3 class="product-post__name">HAMBURGER BÒ</h3>
+                        </div>
+                
+                        <div class="product-post-item__price">
+                            <p class="product-post__price">54000đ</p>
+                        </div>
+                        
+                        <div class="product-post-item__addCart-btn"> 
+                            <button class="product__addCart-btn addToCart" data-id="3">
+                                <div class="product__addCart-title">
+                                    <i class="fas fa-cart-plus"></i>
+                                    <p class="addCart-text">Thêm vào giỏ</p>
+                                </div>
+                            </button>
+                        </div>
+    
+                    </div>
+                </div>
+
+                <div class="product-post">
+                    <div class="product-post__imgBx">
+                        <a class="detail__link" href="detail/detail.html?2">
+                            <img src="./images/product_burger-ga.jpg" alt="">
+                        </a>
+                        <div class="detail__button">
+                            <a class="detail__button-link" href="detail/detail.html?2">Chi tiết</a>
+                        </div>
+                    </div>
+
+                    <div class="product-post__data">
+                        <div class="product-post-item__name">
+                            <h3 class="product-post__name">HAMBURGER GÀ</h3>
+                        </div>
+                
+                        <div class="product-post-item__price">
+                            <p class="product-post__price">52000đ</p>
+                        </div>
+                        
+                        <div class="product-post-item__addCart-btn"> 
+                            <button class="product__addCart-btn addToCart" data-id="2">
+                                <div class="product__addCart-title">
+                                    <i class="fas fa-cart-plus"></i>
+                                    <p class="addCart-text">Thêm vào giỏ</p>
+                                </div>
+                            </button>
+                        </div>
+    
+                    </div>
+                </div>
+
+                <div class="product-post">
+                    <div class="product-post__imgBx">
+                        <a class="detail__link" href="detail/detail.html?1">
+                            <img src="./images/product_burger-tom.jpg" alt="">
+                        </a>
+                        <div class="detail__button">
+                            <a class="detail__button-link" href="detail/detail.html?1">Chi tiết</a>
+                        </div>
+                    </div>
+
+                    <div class="product-post__data">
+                        <div class="product-post-item__name">
+                            <h3 class="product-post__name">HAMBURGER TÔM</h3>
+                        </div>
+                
+                        <div class="product-post-item__price">
+                            <p class="product-post__price">56000đ</p>
+                        </div>
+                        
+                        <div class="product-post-item__addCart-btn"> 
+                            <button class="product__addCart-btn addToCart" data-id="1">
+                                <div class="product__addCart-title">
+                                    <i class="fas fa-cart-plus"></i>
+                                    <p class="addCart-text">Thêm vào giỏ</p>
+                                </div>
+                            </button>
+                        </div>
+    
+                    </div>
+                </div>
+
+                <div class="product-post">
+                    <div class="product-post__imgBx">
+                        <a class="detail__link" href="detail/detail.html?8">
+                            <img src="./images/product_burger-ca.jpg" alt="">
+                        </a>
+                        <div class="detail__button">
+                            <a class="detail__button-link" href="detail/detail.html?8">Chi tiết</a>
+                        </div>
+                    </div>
+
+                    <div class="product-post__data">
+                        <div class="product-post-item__name">
+                            <h3 class="product-post__name">HAMBURGER CÁ</h3>
+                        </div>
+                
+                        <div class="product-post-item__price">
+                            <p class="product-post__price">56000đ</p>
+                        </div>
+                        
+                        <div class="product-post-item__addCart-btn"> 
+                            <button class="product__addCart-btn addToCart" data-id="8">
+                                <div class="product__addCart-title">
+                                    <i class="fas fa-cart-plus"></i>
+                                    <p class="addCart-text">Thêm vào giỏ</p>
+                                </div>
+                            </button>
+                        </div>
+    
+                    </div>
+                </div>
+
+                <div class="product-post">
+                    <div class="product-post__imgBx">
+                        <a class="detail__link" href="detail/detail.html?16">
+                            <img src="./images/product-burger-thit-hun.jpg" alt="PIZZA">
+                        </a>
+                        <div class="detail__button">
+                            <a class="detail__button-link" href="detail/detail.html?16">Chi tiết</a>
+                        </div>
+                    </div>
+
+                    <div class="product-post__data">
+                        <div class="product-post-item__name">
+                            <h3 class="product-post__name">HAMBURGER THỊT HUN</h3>
+                        </div>
+                
+                        <div class="product-post-item__price">
+                            <p class="product-post__price">58000đ</p>
+                        </div>
+                        
+                        <div class="product-post-item__addCart-btn"> 
+                            <button class="product__addCart-btn addToCart" data-id="16">
+                                <div class="product__addCart-title">
+                                    <i class="fas fa-cart-plus"></i>
+                                    <p class="addCart-text">Thêm vào giỏ</p>
+                                </div>
+                            </button>
+                        </div>
+    
+                    </div>
+                </div>
+
+                <div class="product-post">
+                    <div class="product-post__imgBx">
+                        <a class="detail__link" href="detail/detail.html?18">
+                            <img src="./images/product_pizza-bo-bam.jpg" alt="PIZZA">
+                        </a>
+                        <div class="detail__button">
+                            <a class="detail__button-link" href="detail/detail.html?18">Chi tiết</a>
+                        </div>
+                    </div>
+
+                    <div class="product-post__data">
+                        <div class="product-post-item__name">
+                            <h3 class="product-post__name">PIZZA BÒ BẦM</h3>
+                        </div>
+                
+                        <div class="product-post-item__price">
+                            <p class="product-post__price">300000đ</p>
+                        </div>
+                        
+                        <div class="product-post-item__addCart-btn"> 
+                            <button class="product__addCart-btn addToCart" data-id="18">
+                                <div class="product__addCart-title">
+                                    <i class="fas fa-cart-plus"></i>
+                                    <p class="addCart-text">Thêm vào giỏ</p>
+                                </div>
+                            </button>
+                        </div>
+    
+                    </div>
+                </div>
+
+                <div class="product-post">
+                    <div class="product-post__imgBx">
+                        <a class="detail__link" href="detail/detail.html?17">
+                            <img src="./images/product_pizza-xuc-xich.jpg" alt="PIZZA">
+                        </a>
+                        <div class="detail__button">
+                            <a class="detail__button-link" href="detail/detail.html?17">Chi tiết</a>
+                        </div>
+                    </div>
+
+                    <div class="product-post__data">
+                        <div class="product-post-item__name">
+                            <h3 class="product-post__name">PIZZA XÚC XÍCH</h3>
+                        </div>
+                
+                        <div class="product-post-item__price">
+                            <p class="product-post__price">200000đ</p>
+                        </div>
+                        
+                        <div class="product-post-item__addCart-btn"> 
+                            <button class="product__addCart-btn addToCart" data-id="17">
+                                <div class="product__addCart-title">
+                                    <i class="fas fa-cart-plus"></i>
+                                    <p class="addCart-text">Thêm vào giỏ</p>
+                                </div>
+                            </button>
+                        </div>
+    
+                    </div>
+                </div>
+
+                <div class="product-post">
+                    <div class="product-post__imgBx">
+                        <a class="detail__link" href="detail/detail.html?26">
+                            <img src="./images/product_pizza-thit-hun-khoi.jpg" alt="PIZZA">
+                        </a>
+                        <div class="detail__button">
+                            <a class="detail__button-link" href="detail/detail.html?26">Chi tiết</a>
+                        </div>
+                    </div>
+
+                    <div class="product-post__data">
+                        <div class="product-post-item__name">
+                            <h3 class="product-post__name">PIZZA THỊT HUN</h3>
+                        </div>
+                
+                        <div class="product-post-item__price">
+                            <p class="product-post__price">250000đ</p>
+                        </div>
+                        
+                        <div class="product-post-item__addCart-btn"> 
+                            <button class="product__addCart-btn addToCart" data-id="26">
+                                <div class="product__addCart-title">
+                                    <i class="fas fa-cart-plus"></i>
+                                    <p class="addCart-text">Thêm vào giỏ</p>
+                                </div>
+                            </button>
+                        </div>
+    
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer" id="footer">
+        <div class="footer__container">
+            <div class="footer-icons">
+                <div class= "footer-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class= "footer-icon">
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <div class= "footer-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div class= "footer-icon">
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+            <div class="footer__shortcuts">
+                <h2 class="footer__shortcut"><a href="#Home">TRANG CHỦ</a></h2>
+                <h2 class="footer__shortcut"><a href="/about/about.html">GIỚI THIỆU</a></h2>
+                <h2 class="footer__shortcut"><a href="/shop/shop.html">SẢN PHẨM</a></h2>
+                <h2 class="footer__shortcut"><a href="/contact/contact.html">VỊ TRÍ</a></h2>
+            </div>
+            <div class="footer__policies">
+                <p class="footer__policy"><a href="/contact/contact.html">LIÊN HỆ</a></p>
+                <span class="policy__seperate">|</span>
+                <p class="footer__policy"><a href="#Home">BLOG</a></p>
+                <span class="policy__seperate">|</span>
+                <p class="footer__policy"><a href="#Home">CHÍNH SÁCH BẢO MẬT</a></p>
+                <span class="policy__seperate">|</span>
+                <p class="footer__policy"><a href="#Home">DỊCH VỤ</a></p>
+            </div>
+
+        </div>
+        <div class="footer__address">
+            <div class="footer__address-infor">
+                Địa chỉ: 273 An D. Vương, Phường 3, Quận 5, Thành phố Hồ Chí Minh. Tổng đài hỗ trợ: 19003769 - Email: abc@gmail.com.vn
+            </div>
+            <div class="footer__copyright">
+                © 2021 - Bản quyền thuộc về Chi Thinh
+            </div>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal__overlay"></div>   
+        
+        <div class="modal__body">
+                <div class="close-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="auth-form-login form active" id="login-form">
+                    <div class="modal__inner">
+                        <div class="auth-form__header">
+                            <h3 class="auth-form__heading">Đăng nhập</h3>
+                        </div>
+
+                        <div class="auth-form__form">
+                            <div class="auth-form__group">
+                                <label for="">Tên tài khoản</label>
+                                <input type="text" class="auth-form__input username-input" placeholder="Nhập tên tài khoản">
+                            </div>
+                            <div class="auth-form__group">
+                                <label for="">Mật khẩu</label>
+                                <input type="password" class="auth-form__input password-input" placeholder="Nhập mật khẩu">
+                            </div>
+
+                        </div>
+
+                        <div class="login-signup-btn login-btn">
+                            <span>Đăng nhập</span>
+                        </div>
+
+                        <div class="auth-form__aside">
+                            <p class="auth-form__signup-noti">
+                                Chưa có tài khoản ?
+                                <span class="auth-form__switch-to signup">Đăng ký</span>
+                            </p>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="auth-form-signup form" id="register-form">
+                <div class="modal__inner">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng ký</h3>
+                    </div>
+
+                    <div class="auth-form__form">
+                        <div class="auth-form__group signup-form">
+                            <div class="auth-form__item form-group">
+                                <label for="">Họ tên</label>
+                                <input type="text" name="fullname" id="fullname" rules="required" class="auth-form__input" placeholder="Nhập họ tên">
+                                <span class="form-message"></span>
+                            </div>
+
+                            <div class="auth-form__item form-group">
+                                <label for="">Số điện thoại</label>
+                                <input type="text" name="phone-number" id="phone-number" rules="required|sdt"  class="auth-form__input" placeholder="Nhập số điện thoại">
+                                <span class="form-message"></span>
+                            </div>
+                        </div>
+                        <div class="auth-form__group signup-form">
+                            <div class="auth-form__item form-group">
+                                <label for="">Tên tài khoản</label>
+                                <input type="text" name="username" id="username" rules="required" class="auth-form__input" placeholder="Nhập tên tài khoản">
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="auth-form__item form-group">
+                                <label for="">Mật khẩu</label>
+                                <input name="password" id="password" rules="required|min:6" class="auth-form__username" type="password" rules="required|min:6" class="auth-form__input" placeholder="Nhập mật khẩu">
+                                <span class="form-message"></span>
+                            </div>
+        
+                        </div>
+
+                        <div class="auth-form__group signup-form">
+                            <div class="auth-form__item form-group ">
+                                <label for="">Email</label>
+                                <input name="email" id="email" type="text" rules="required|email"  class="auth-form__input" placeholder="Nhập địa chỉ email">
+                                <span class="form-message"></span>
+                            </div>
+
+                            <div class="auth-form__item form-group">
+                                <label for="">Xác nhận mật khẩu</label>
+                                <input name="password-again" id="password-again" type="password" rules="required|password_comfirm" class="auth-form__input" placeholder="Nhập lại mật khẩu">
+                                <span class="form-message"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="login-signup-btn signup-btn">
+                        <span>Đăng ký</span>
+                    </div>
+
+                    <div class="auth-form__aside">
+                        <p class="auth-form__signup-noti">
+                            Bạn đã có tài khoản?
+                            <span class="auth-form__switch-to login">Đăng nhập</span>
+                        </p>
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+        <div class="modal__cart">
+            <div class="modal__cart-header">
+                <h1>GIỎ HÀNG</h1>
+                <button class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="box">
+                <ul class="modal__cart-product-box">
+                    <li class="modal__cart-product-item">
+                        <div class="modal__cart-delete-icon deleteIcon">
+                                 <i class="far fa-times-circle" data-id = "1"></i>
+                        </div>
+
+                        <div class="modal__cart-imgbox">
+                            <img class="modal__cart-img" src="" alt="">
+                        </div>
+                        <div class="modal__cart-item-infor">
+                            <h3 class="modal__cart-item-name">Hamburger</h3>
+                            <span class="modal__cart-item-price">100$</span>
+                            <div class="modal__cart-item-input">
+                                <button class="cart__item-decrement"  data-id = "1">-</button>
+                                <input type="number" min="1" max="9999" step="1" value="1" class="cart_item-input" data-id = "1" inputmode="numeric">
+                                <button class="cart__item-increment" data-id = "1">+</button>
+                            </div>       
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="modal__cart-footer">
+                <div class="modal__cart-subtotal">
+                    <h3 class="subtotal-text">TỔNG TIỀN:</h3>
+                    <span class="modal__cart-subtotal-all">$10000</span>
+                </div>
+                <div class="modal__cart-view-cart">
+                    <a href="cartPage/cartPage.html"><span class="modal__cart-view-cart-btn">XEM GIỎ HÀNG</span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal__notification-box">
+            <div class="notification-content">
+                <h3 class="notification-description">Xin quý khách vui lòng đăng nhập !!!</h3>
+                <div class="notification-close-btn close-btn">
+                    <p>OK</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="base/js/config.js"></script>
+    <script src="model/data.js"></script>
+    <script src="model/ProductModel.js"></script>
+    <script src="model/UserModel.js"></script>
+    <script src="model/BillModel.js"></script>
+    <script src="model/CategoryModel.js"></script>
+    <script src="modal/js/cartEvent.js"></script>
+    <script src="modal/js/authEvent.js"></script>
+    <script src="orderPage/js/orderPageEvent.js"></script>
+    <script src="home/js/event.js"></script>
+    <script src="modal/js/modalEvent.js"></script>
+
+    <script>
+           Validator('#register-form');
+    </script>   
+ 
+</body>
+</html>

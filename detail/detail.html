@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../home/css/home.css">
+    <link rel="stylesheet" href="../base/css/base.css">
+    <link rel="stylesheet" href="../modal/css/modalCart.css">
+    <link rel="stylesheet" href="../modal/css/auth.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="css/responsiveDetail.css">
+    <link rel="stylesheet" href="../modal/css/modalNotification.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+          integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />    
+</head>
+<body>
+    <div class="header" id="header">
+        <div class="home-logo">
+            <a href="#Home">
+                <img src="../images/1200px-Food_Network_Logo.svg.png" alt="">
+                <div>CT-FOOD</div>
+            </a>
+        </div>
+        <ul class="nav__list">
+            <li class="nav__item"><a href="/index.html">Trang chủ</a></li>
+            <li class="nav__item"><a href="/about/about.html">Giới thiệu</a></li>
+            <li class="nav__item"><a href="/shop/shop.html">Sản phẩm</a></li>
+            <li class="nav__item"><a href="/contact/contact.html">Liên hệ</a></li>
+        </ul>
+
+        <div class = "nav__icon">
+            <!-- <div class="home-search">
+                <i class="fas fa-search"></i>
+            </div> -->
+            <div class="nav__user">
+                <div class="user__icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class = "nav__user-img">
+                    <img src="https://source.unsplash.com/random" alt="">
+                </div>
+                <div class="user__menu-bar">
+                    <h3 class="user__menu-username"></h3>
+                    <ul class="user__menu-bar-list">
+                        <li class="user__menu-item">
+                            <a href="/orderPage/orderPage.html">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                                <p>Đơn hàng</p>
+                            </a>
+                        </li>
+                        <li class="user__menu-item user__menu--logout">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <p>Đăng xuất</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav__cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="nav__cart-notice">0</span>
+            </div>
+        </div>
+    </div>  
+
+        <div id = "detail">
+        <div class = "detail-content">
+            <div class="sub-nav">
+                <div class="sub-nav__item  pd-left-right-174">
+                    <span><a href="/index.html">Trang chủ</a></span>
+                    <i class="fas fa-angle-right"></i>
+                    <span><a href="/shop/shop.html">Sản phẩm</a></span>
+                    <i class="fas fa-angle-right"></i>
+                    <span class = "nav__item--disable"></span>
+                </div>
+            </div>
+    
+            <div id="detail-item" class= "detail-item">
+                <div class="detail-item__slider">
+                    <div class="item-imgBx item-imgBx--active" data-index = "1">
+                        <img class="item__img" src="../images/product_burger-tom.jpg" alt="">
+                    </div>
+                </div>
+        
+                <div class="item-infor">
+                    <h1 class="item__title">Bánh HAMBURGER</h1>
+                    <div class="item__price-status">
+                        <span class="item__price">56.000 đ</span>
+                        <span class="item__status">Còn hàng</span>
+                    </div>
+<!--         
+                    <div class="item__rating">
+                        <span>(11 reviews)</span>
+                    </div> -->
+        
+                    <div class="item-infor__description">
+                    Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. 
+                    </div>
+    
+                    <div class="item__variation">
+                
+                            <div class="item__change-input">
+                                <button class="decrement" id="decrement" onclick="stepper(this)">-</button>
+                                <input class ="my-input inputQuantity" data-id="1" type="number" min="1"  max="100" step="1" value="1" id="my-input"  inputmode="numeric" />
+                                <button class="increment" id="increment" onclick="stepper(this)">+</button>
+                            </div>
+            
+                        <button id="buy-it-now" data-id="1" class="add-to-cart-btn addToCart">Mua hàng</button>
+                    </div>
+        
+                    <div class="item__meta">
+                        <span class="sku__wrapper"
+                            >Product-id: 
+                            <span class="sku__value"> 1</span>
+                        </span>
+                        <span class="item__meta-Category">
+                            Category:
+                            <a href="#" title> Pizza</a>
+                        </span>
+                        <span class="item__meta-tags"
+                            >Tags:
+                            <a href="#" title> Pizza</a>
+                        </span>
+                    </div>
+        
+                    <div class="icon-bar">
+                        <i class="fab fa-facebook icon-facebook"></i>
+                        <i class="fab fa-twitter icon-twitter"></i>
+                        <i class="fas fa-envelope icon-envelope"></i>
+                        <i class="fab fa-facebook-messenger icon-messenger"></i>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="footer" id="footer">
+            <div class="footer__container">
+                <div class="footer-icons">
+                    <div class= "footer-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class= "footer-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class= "footer-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class= "footer-icon">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                </div>
+                <div class="footer__shortcuts">
+                    <h2 class="footer__shortcut"><a href="">TRANG CHỦ</a></h2>
+                    <h2 class="footer__shortcut"><a href="">GIỚI THIỆU</a></h2>
+                    <h2 class="footer__shortcut"><a href="">SẢN PHẨM</a></h2>
+                    <h2 class="footer__shortcut"><a href="">VỊ TRÍ</a></h2>
+                </div>
+                <div class="footer__policies">
+                    <p class="footer__policy"><a href="">LIÊN HỆ</a></p>
+                    <span class="policy__seperate">|</span>
+                    <p class="footer__policy"><a href="#Home">BLOG</a></p>
+                    <span class="policy__seperate">|</span>
+                    <p class="footer__policy"><a href="#Home">CHÍNH SÁCH BẢO MẬT</a></p>
+                    <span class="policy__seperate">|</span>
+                    <p class="footer__policy"><a href="Home">DỊCH VỤ</a></p>
+                </div>
+    
+            </div>
+            <div class="footer__address">
+                <div class="footer__address-infor">
+                    Địa chỉ: 273 An D. Vương, Phường 3, Quận 5, Thành phố Hồ Chí Minh. Tổng đài hỗ trợ: 19003769 - Email: abc@gmail.com.vn
+                </div>
+                <div class="footer__copyright">
+                    © 2021 - Bản quyền thuộc về Chi Thinh
+                </div>
+            </div>
+        </div>
+    
+        <div class="modal">
+            <div class="modal__overlay"></div>   
+            
+            <div class="modal__body">
+                    <div class="close-btn">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="auth-form-login form active" id="login-form">
+                        <div class="modal__inner">
+                            <div class="auth-form__header">
+                                <h3 class="auth-form__heading">Đăng nhập</h3>
+                            </div>
+    
+                            <div class="auth-form__form">
+                                <div class="auth-form__group">
+                                    <label for="">Tên tài khoản</label>
+                                    <input type="text" class="auth-form__input username-input" placeholder="Nhập tên tài khoản">
+                                </div>
+                                <div class="auth-form__group">
+                                    <label for="">Mật khẩu</label>
+                                    <input type="password" class="auth-form__input password-input" placeholder="Nhập mật khẩu">
+                                </div>
+    
+                            </div>
+    
+                            <div class="login-signup-btn login-btn">
+                                <span>Đăng nhập</span>
+                            </div>
+    
+                            <div class="auth-form__aside">
+                                <p class="auth-form__signup-noti">
+                                    Chưa có tài khoản ?
+                                    <span class="auth-form__switch-to signup">Đăng ký</span>
+                                </p>
+                            </div>
+                        </div>
+                </div>
+    
+                <div class="auth-form-signup form" id="register-form">
+                    <div class="modal__inner">
+                        <div class="auth-form__header">
+                            <h3 class="auth-form__heading">Đăng ký</h3>
+                        </div>
+    
+                        <div class="auth-form__form">
+                            <div class="auth-form__group signup-form">
+                                <div class="auth-form__item form-group">
+                                    <label for="">Họ tên</label>
+                                    <input type="text" name="fullname" id="fullname" rules="required" class="auth-form__input" placeholder="Nhập họ tên">
+                                    <span class="form-message"></span>
+                                </div>
+    
+                                <div class="auth-form__item form-group">
+                                    <label for="">Số điện thoại</label>
+                                    <input type="text" name="phone-number" id="phone-number" rules="required|sdt"  class="auth-form__input" placeholder="Nhập số điện thoại">
+                                    <span class="form-message"></span>
+                                </div>
+                            </div>
+                            <div class="auth-form__group signup-form">
+                                <div class="auth-form__item form-group">
+                                    <label for="">Tên tài khoản</label>
+                                    <input type="text" name="username" id="username" rules="required" class="auth-form__input" placeholder="Nhập tên tài khoản">
+                                    <span class="form-message"></span>
+                                </div>
+                                <div class="auth-form__item form-group">
+                                    <label for="">Mật khẩu</label>
+                                    <input name="password" id="password" rules="required|min:6" class="auth-form__username" type="password" rules="required|min:6" class="auth-form__input" placeholder="Nhập mật khẩu">
+                                    <span class="form-message"></span>
+                                </div>
+            
+                            </div>
+    
+                            <div class="auth-form__group signup-form">
+                                <div class="auth-form__item form-group ">
+                                    <label for="">Email</label>
+                                    <input name="email" id="email" type="text" rules="required|email"  class="auth-form__input" placeholder="Nhập địa chỉ email">
+                                    <span class="form-message"></span>
+                                </div>
+    
+                                <div class="auth-form__item form-group">
+                                    <label for="">Xác nhận mật khẩu</label>
+                                    <input name="password-again" id="password-again" type="password" rules="required|password_comfirm" class="auth-form__input" placeholder="Nhập lại mật khẩu">
+                                    <span class="form-message"></span>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="login-signup-btn signup-btn">
+                            <span>Đăng ký</span>
+                        </div>
+    
+                        <div class="auth-form__aside">
+                            <p class="auth-form__signup-noti">
+                                Bạn đã có tài khoản?
+                                <span class="auth-form__switch-to login">Đăng nhập</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+    
+            <div class="modal__cart">
+                <div class="modal__cart-header">
+                    <h1>GIỎ HÀNG</h1>
+                    <button class="close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <div class="box">
+                    <ul class="modal__cart-product-box">
+                        <li class="modal__cart-product-item">
+                            <div class="modal__cart-delete-icon deleteIcon">
+                                     <i class="far fa-times-circle" data-id = "1"></i>
+                            </div>
+    
+                            <div class="modal__cart-imgbox">
+                                <img class="modal__cart-img" src="" alt="">
+                            </div>
+                            <div class="modal__cart-item-infor">
+                                <h3 class="modal__cart-item-name"></h3>
+                                <span class="modal__cart-item-price"></span>
+                                <div class="modal__cart-item-input">
+                                    <button class="cart__item-decrement"  data-id = "1">-</button>
+                                    <input type="number" min="1" max="9999" step="1" value="1" class="cart_item-input" data-id = "1" inputmode="numeric">
+                                    <button class="cart__item-increment" data-id = "1">+</button>
+                                </div>       
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="modal__cart-footer">
+                    <div class="modal__cart-subtotal">
+                        <h3 class="subtotal-text">TỔNG TIỀN:</h3>
+                        <span class="modal__cart-subtotal-all">$10000</span>
+                    </div>
+                    <div class="modal__cart-view-cart">
+                        <a href="/cartPage/cartPage.html"><span class="modal__cart-view-cart-btn">XEM GIỎ HÀNG</span></a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="modal__notification-box">
+                <div class="notification-content">
+                    <h3 class="notification-description">Xin quý khách vui lòng đăng nhập !!!</h3>
+                    <div class="notification-close-btn close-btn">
+                        <p>OK</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../model/data.js"></script>
+        <script src="../base/js/config.js"></script>
+        <script src="../model/CategoryModel.js"></script>
+        <script src="../model/ProductModel.js"></script>
+        <script src="../model/UserModel.js"></script>
+        <script src="../home/js/event.js"></script>
+        <script src="../modal/js/cartEvent.js"></script>
+        <script src="../modal/js/authEvent.js"></script>
+        <script src="../modal/js/modalEvent.js"></script>
+        <script src="../orderPage/js/orderPageEvent.js"></script>
+        <script src="../detail/js/detail.js"></script>
+        <script>
+            Validator('#register-form');
+        </script>   
+</body>
+</html>
+
+<!-- 
+      
+<div class="detail-item__next-prev-btn">
+    <button class="detail-item__prev-btn" onclick="clickSlideBtn(-1)">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="detail-item__next-btn" onclick="clickSlideBtn(1)">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</div> -->
